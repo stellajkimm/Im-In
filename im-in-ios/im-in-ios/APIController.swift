@@ -21,7 +21,7 @@ class APIController {
     }
     
     func loadAllEvents() {
-//        
+        
 //        // The iTunes API wants multiple terms separated by + symbols, so replace spaces with + signs
 //        let itunesSearchTerm = searchTerm.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
 //        
