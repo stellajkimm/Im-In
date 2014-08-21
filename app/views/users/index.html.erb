@@ -1,4 +1,28 @@
 <div class="container">
+      <h2><strong>LOG IN</strong></h2>
+    <%= form_for @user, url: login_path do |f| %>
+
+      <div class="form-group">
+          <%= f.label :username %>
+          <%= f.text_field :username %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </div>
+
+  <br>
+      <div class="form-group">
+        <%= f.submit "Login", class: "button" %>
+      </div>
+    <% end %>
+</div>
+
+<div class="container">
+    Not a User? <button class="show">Sign Up!</button>
+</div>
+
+<div class="container hidden">
     <h2><strong>SIGN UP</strong></h2>
     <%= form_for @user, url: {action: "create"} do |f| %>
       <div class="form-group">
@@ -24,23 +48,4 @@
     <% end %>
 </div>
 
-<div class="container">
-      <h2><strong>LOG IN</strong></h2>
-    <%= form_for @user, url: login_path do |f| %>
-
-      <div class="form-group">
-          <%= f.label :username %>
-          <%= f.text_field :username %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-      </div>
-
-  <br>
-      <div class="form-group">
-        <%= f.submit "Login", class: "button" %>
-      </div>
-    <% end %>
-</div>
 
